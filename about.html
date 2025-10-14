@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Goa Science High School</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',  // Darker blue
+            secondary: '#D4AF37', // Gold color
+            accent: '#D4AF37'    // Gold color
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="public/css/styles.css" />
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-primary shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <img src="favicon.ico" class="h-8 w-8" alt="GSHS Logo">
+            <span class="ml-2 text-xl font-bold text-secondary">GOA SCIENCE HIGH SCHOOL</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="index.html"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">Home</a>
+          <div class="dropdown">
+            <button class="dropbtn" onclick="acadsFn()">Academics</button>
+            <div class="dropdown-content" id="acadsDropdown">
+              <a href="academics.html">SHS Programs</a>
+            </div>
+          </div>
+          <a href="admissions.html"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">Admissions</a>
+          <a href="community.html"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">Community</a>
+          <a href="index.html#contact"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">Contact</a>
+          <a href="faculty.html"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">Faculty</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-white hover:text-secondary focus:outline-none">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-primary-light pb-4">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Home</a>
+          <details>
+            <summary class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Academics
+            </summary>
+            <a href="academics.html"
+              class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary"> SHS
+              Programs</a>
+          </details>
+          <a href="admissions.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Admissions</a>
+          <a href="community.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Community</a>
+          <a href="index.html#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Contact</a>
+          <a href="faculty.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Faculty</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- About Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <!-- Hero Image Section -->
+    <!-- div class="mb-16 rounded-xl overflow-hidden shadow-2xl">
+      <img src="public/images/students-learning.png" alt="GSHS Students Learning"
+        class="w-full h-96 object-cover">
+    </div -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">About Our School</h1>
+      <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
+        Goa Science High School is a public science high school located in Tagongtong, Goa, Camarines Sur. Established
+        in 2014, our institution is dedicated to providing quality education with special emphasis on science and
+        technology while nurturing globally competitive students who excel in academics, leadership, and character
+        formation.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-20">
+      <!-- Mission -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition relative overflow-hidden">
+        <img src="public/images/school-gate.png" alt="Science Education"
+          class="absolute inset-0 w-full h-full object-cover opacity-10">
+        <div class="text-center">
+          <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary bg-opacity-10">
+            <i data-feather="target" class="text-primary h-6 w-6"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-gray-900">Mission</h3>
+          <p class="mt-4 text-gray-600">
+            To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic
+            education where:
+          </p>
+          <ul class="mt-4 text-gray-600 space-y-2">
+            • students learn in a child-friendly, gender-sensitive, safe and motivating environment;
+
+            • teachers facilitate learning and constantly nurture every learner;
+
+            • administrators and staff, as stewards of the institution, ensure an enabling and supportive environment
+            for effective learning to happen; and
+
+            • family, community and other stakeholders are actively sagaged and share responsibility for developing
+            life-long learners.
+          </ul>
+        </div>
+      </div>
+      <!-- Vision -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition relative overflow-hidden">
+        <img src="public/images/vision.png" alt="Global Technology"
+          class="absolute inset-0 w-full h-full object-cover opacity-10">
+        <div class="text-center">
+          <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-secondary bg-opacity-10">
+            <i data-feather="eye" class="text-secondary h-6 w-6"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-gray-900">Vision</h3>
+          <p class="mt-4 text-gray-600">
+            We dream of Filipinos who passionately love their country and whose values and competencies enable them to
+            realized their full potential and contribute meaningfully to building the nation.
+            As a learner-centered public institution, the Department of Education continuously improves itself to better
+            serve its stakeholders.
+          </p>
+        </div>
+      </div>
+      <!-- Core Values -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition relative overflow-hidden">
+        <img src="public/images/core-values.png" alt="Teamwork"
+          class="absolute inset-0 w-full h-full object-cover opacity-10">
+        <div class="text-center">
+          <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary bg-opacity-10">
+            <i data-feather="heart" class="text-primary h-6 w-6"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-gray-900">Core Values</h3>
+          <ul class="mt-4 text-gray-600 space-y-2">
+            <li>Maka-Diyos</li>
+            <li>Maka-tao</li>
+            <li>Makakalikasan</li>
+            <li>Makabansa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- School History -->
+    <div class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <!-- div>
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Our History</h2>
+        <p class="text-lg text-gray-600 mb-6">
+          Since our founding in 2014, GSHS has grown from a small science-focused program to a leading institution in
+          STEM education in the Bicol region.
+        </p>
+        <img src="public/images/history.png" alt="Historical Photo" class="rounded-lg shadow-lg">
+      </div -->
+      <div class="bg-white p-8 rounded-xl shadow-lg">
+        <img src="public/images/location.png" alt="Goa City" class="w-full h-48 object-cover rounded-lg mb-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Our Location</h3>
+        <p class="text-gray-600">
+          Nestled in the beautiful town of Goa, Camarines Sur, our campus provides the perfect environment for focused
+          learning surrounded by nature.
+        </p>
+      </div>
+    </div>
+
+    <!-- School Moto -->
+    <div class="text-center py-12 bg-gradient-to-r from-primary to-secondary rounded-xl">
+      <blockquote class="text-2xl italic text-white">
+        "Pursuing Excellence, Responding to Society's Change"
+      </blockquote>
+      <div class="mt-8">
+        <a href="admissions.html"
+          class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10 transition">
+          <i data-feather="chevrons-right" class="mr-2 w-5 h-5"></i>Enroll Now
+          <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white text-lg font-semibold">Quick Links</h3>
+          <ul class="mt-4 space-y-2">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="academics.html" class="hover:text-white transition">Academics</a></li>
+            <li><a href="admissions.html" class="hover:text-white transition">Admissions</a></li>
+            <li><a href="community.html" class="hover:text-white transition">Community</a></li>
+            <li><a href="faculty.html" class="hover:text-white transition">Faculty</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white text-lg font-semibold">Find Us</h3>
+          <div class="mt-4 flex space-x-6">
+            <a href="https://www.facebook.com/GoaScienceHighSchool" class="hover:text-white transition">
+              <i data-feather="facebook" class="h-6 w-6"></i>
+            </a>
+            <a href="mailto:305545@deped.com.ph" class="hover:text-white transition">
+              <i data-feather="mail" class="h-6 w-6"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800">
+        <p class="text-center">
+          &copy; 2025 Goa Science High School. By Eruel Monrique V. Mabasa
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="public/script.js"></script>
+</body>
+
+</html>
