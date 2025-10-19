@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions | Goa Science High School</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',  // Darker blue
+            secondary: '#D4AF37', // Gold color
+            accent: '#D4AF37'    // Gold color
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="public/css/styles.css" />
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-primary shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <img src="favicon.ico" class="h-8 w-8" alt="GSHS Logo">
+            <span class="ml-2 text-xl font-bold text-secondary">GOA SCIENCE HIGH SCHOOL</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="index.html"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">Home</a>
+          <a href="about.html"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">About</a>
+          <div class="dropdown">
+            <button class="dropbtn" onclick="acadsFn()">Academics</button>
+            <div class="dropdown-content" id="acadsDropdown">
+              <a href="academics.html">SHS Programs</a>
+            </div>
+          </div>
+          <a href="#contact"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">Contact</a>
+          <a href="faculty.html"
+            class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary transition">Faculty</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-white hover:text-secondary focus:outline-none">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-primary-light pb-4">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Home</a>
+          <a href="about.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">About</a>
+          <details>
+            <summary class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Academics
+            </summary>
+            <a href="academics.html"
+              class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary"> SHS
+              Programs</a>
+          </details>
+          <a href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Contact</a>
+          <a href="faculty.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-secondary">Faculty</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Admissions Hero -->
+  <div class="relative bg-primary">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 relative">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+          Admissions
+        </h1>
+        <p class="mt-6 text-xl text-white max-w-3xl mx-auto">
+          Join our community of young scholars and innovators
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Requirements Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          Admission Requirements
+        </h2>
+        <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+          What you need to prepare for your application
+        </p>
+      </div>
+
+      <!-- Freshmen Requirements -->
+      <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-full">
+            <i data-feather="user-plus" class="text-primary h-6 w-6"></i>
+          </div>
+          <h3 class="ml-4 text-xl font-bold text-gray-900">For Incoming Grade 7 & 12</h3>
+        </div>
+        <div class="mt-6">
+          <ul class="space-y-4 text-gray-600">
+            <li class="flex items-start">
+              <i data-feather="check" class="text-secondary flex-shrink-0 h-5 w-5"></i>
+              <span class="ml-3">Completed Registration Form</span>
+            </li>
+            <li class="flex items-start">
+              <i data-feather="check" class="text-secondary flex-shrink-0 h-5 w-5"></i>
+              <span class="ml-3">Photocopy of PSA Birth Certificate</span>
+            </li>
+            <li class="flex items-start">
+              <i data-feather="check" class="text-secondary flex-shrink-0 h-5 w-5"></i>
+              <span class="ml-3">Photocopy of Grade 6 (JHS) or Grade 10 (SHS) Academic Report Card (Form 138)</span>
+            </li>
+            <li class="flex items-start">
+              <i data-feather="check" class="text-secondary flex-shrink-0 h-5 w-5"></i>
+              <span class="ml-3">Average Grade of 85 in Science, Math, and English</span>
+            </li>
+            <li class="flex items-start">
+              <i data-feather="check" class="text-secondary flex-shrink-0 h-5 w-5"></i>
+              <span class="ml-3">Average Grade of 83 in other subjects</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enrollment Process -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          Enrollment Process
+        </h2>
+        <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+          Follow these steps to become part of GSHS
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Step 1 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div
+            class="flex-shrink-0 bg-white rounded-full h-16 w-16 flex items-center justify-center border-4 border-primary text-primary font-bold text-xl shadow-lg">
+            1
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-8">
+            <h3 class="text-xl font-bold text-gray-900">Submit Application</h3>
+            <p class="mt-2 text-gray-600">
+              Complete the registration form and submit all required documents to the GSHS Registrar's Office during
+              application period.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div
+            class="flex-shrink-0 bg-white rounded-full h-16 w-16 flex items-center justify-center border-4 border-primary text-primary font-bold text-xl shadow-lg">
+            2
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-8">
+            <h3 class="text-xl font-bold text-gray-900">Entrance Examination</h3>
+            <p class="mt-2 text-gray-600">
+              Take the GSHS Entrance Examinations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div
+            class="flex-shrink-0 bg-white rounded-full h-16 w-16 flex items-center justify-center border-4 border-primary text-primary font-bold text-xl shadow-lg">
+            3
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-8">
+            <h3 class="text-xl font-bold text-gray-900">Interview</h3>
+            <p class="mt-2 text-gray-600">
+              Successful examinees will be scheduled for an interview.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div
+            class="flex-shrink-0 bg-white rounded-full h-16 w-16 flex items-center justify-center border-4 border-primary text-primary font-bold text-xl shadow-lg">
+            4
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-8">
+            <h3 class="text-xl font-bold text-gray-900">Acceptance</h3>
+            <p class="mt-2 text-gray-600">
+              Notification of acceptance will be sent via email or text message.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div
+            class="flex-shrink-0 bg-white rounded-full h-16 w-16 flex items-center justify-center border-4 border-primary text-primary font-bold text-xl shadow-lg">
+            5
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-8">
+            <h3 class="text-xl font-bold text-gray-900">Enrollment</h3>
+            <p class="mt-2 text-gray-600">
+              Complete enrollment by submitting all remaining requirements during the
+              enrollment period.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a href="#"
+          class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-secondary hover:bg-yellow-600 md:py-4 md:text-lg md:px-10 transition">
+          Apply Now
+          <i data-feather="arrow" class="ml-2 w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white text-lg font-semibold">Quick Links</h3>
+          <ul class="mt-4 space-y-2">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About</a></li>
+            <li><a href="academics.html" class="hover:text-white transition">Academics</a></li>
+            <li><a href="faculty.html" class="hover:text-white transition">Faculty</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white text-lg font-semibold">Find Us</h3>
+          <div class="mt-4 flex space-x-6">
+            <a href="https://www.facebook.com/GoaScienceHighSchool" class="hover:text-white transition">
+              <i data-feather="facebook" class="h-6 w-6"></i>
+            </a>
+            <a href="mailto:305545@deped.com.ph" class="hover:text-white transition">
+              <i data-feather="mail" class="h-6 w-6"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800">
+        <p class="text-center">
+          &copy; 2025 Goa Science High School. By Eruel Monrique V. Mabasa
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="public/script.js"></script>
+</body>
+
+</html>
