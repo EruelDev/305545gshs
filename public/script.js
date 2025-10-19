@@ -35,3 +35,26 @@ window.onclick = function (e) {
     };
   };
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  feather.replace();
+
+  const gradeLevel = document.getElementById('grade_level');
+  const strandContainer = document.getElementById('strand_container');
+
+  gradeLevel.addEventListener('change', function () {
+    if (this.value >= 11) {
+      strandContainer.classList.remove('hidden');
+    } else {
+      strandContainer.classList.add('hidden');
+    }
+  });
+
+  const form = document.getElementById('application_form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Application submitted successfully! We will contact you soon.');
+    form.reset();
+    strandContainer.classList.add('hidden');
+  });
+});
